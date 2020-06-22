@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { Text, View, Animated, Modal, TouchableOpacity } from "react-native";
+import { Text, View, Animated, TouchableOpacity } from "react-native";
+import Modal from 'react-native-modal'
 
 import styles from "./style";
 
@@ -77,6 +78,9 @@ class AlertPro extends Component {
         animationType="none"
         supportedOrientations={SUPPORTED_ORIENTATIONS}
         onRequestClose={closeOnPressBack ? this.close : null}
+        statusBarTranslucent
+        useNativeDriver
+        style={styles.modal}
       >
         <TouchableOpacity
           activeOpacity={1}
